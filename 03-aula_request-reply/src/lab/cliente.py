@@ -5,6 +5,10 @@ context = zmq.Context()
 socket = context.socket(zmq.REQ)
 socket.connect("tcp://broker:5555")
 
+# Rodar separado do broker e do servidor
+# 1° docker compose up broker servidor
+# 2° docker compose run -it cliente
+
 i = 0
 
 while True:
